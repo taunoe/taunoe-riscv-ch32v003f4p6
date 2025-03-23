@@ -7,13 +7,15 @@
 
 [SRC/Debug/](SRC/Debug/) - delay fuction, UART debugging source file and header file
 
-[SRC/Ld/](SRC/Ld/) - ld file
+[SRC/Ld/](SRC/Ld/) - Linker Description file
 
 [SRC/Peripheral/](SRC/Peripheral/) - basic peripheral driver source file and header file
 
 [SRC/Startup/](SRC/Startup/) - startup file
 
-## ADC
+## ADC - Analog-to-Digital Converter
+
+Direct Memory Access (DMA) with an Analog-to-Digital Converter (ADC)
 
 [ADC/ADC_DMA/](ADC/ADC_DMA/) - ADC DMA sampling routines
 
@@ -31,7 +33,7 @@
 
 [APPLICATION/SoftUART/](APPLICATION/SoftUART/) - I/O port simulation serial port routine
 
-## DMA
+## DMA - Direct Memory Access
 
 [DMA/DMA_MEM2MEM/](DMA/DMA_MEM2MEM/) - Memory to memory mode routine
 
@@ -107,73 +109,73 @@
 
 [SPI/FullDuplex_HardNSS/](SPI/FullDuplex_HardNSS/) - Hardware NSS mode, master/slave mode, data transceiver
 
-SPI/SPI_CRC/ - CRC error check and master/slave mode transceiver routine
+[SPI/SPI_CRC/](SPI/SPI_CRC/) - CRC error check and master/slave mode transceiver routine
 
-SPI/SPI_DMA/ - SPI DMA, master/slave mode transceiver routine
+[SPI/SPI_DMA/](SPI/SPI_DMA/) - SPI DMA, master/slave mode transceiver routine
 
 ## SDI_Printf
 
-SDI_Printf/SDI_Printf/ - debug interface SDI, virtual serial port.   
+[SDI_Printf/SDI_Printf/](SDI_Printf/SDI_Printf/) - debug interface SDI, virtual serial port.   
 
 ## SYSTICK
 
-SYSTICK/SYSTICK_Interrupt/ - systick interrupt routine  
+[SYSTICK/SYSTICK_Interrupt/](SYSTICK/SYSTICK_Interrupt/) - systick interrupt routine  
 
 ## TIM
 
-TIM/Clock_Select/ - clock source selection routine
+[TIM/Clock_Select/](TIM/Clock_Select/) - clock source selection routine
 
-TIM/ComplementaryOutput_DeadTime/ - complementary output and deadband insertion mode routines
+[TIM/ComplementaryOutput_DeadTime/](TIM/ComplementaryOutput_DeadTime/) - complementary output and deadband insertion mode routines
 
-TIM/ExtTrigger_Start_Two_Timer/ - external trigger routines to start two timers synchronously
+[TIM/ExtTrigger_Start_Two_Timer/](TIM/ExtTrigger_Start_Two_Timer/) - external trigger routines to start two timers synchronously
 
-TIM/Input_Capture/ - input capture routine
+[TIM/Input_Capture/](TIM/Input_Capture/) - input capture routine
 
-TIM/One_Pulse/ - single pulse output routine
+[TIM/One_Pulse/](TIM/One_Pulse/) - single pulse output routine
 
-TIM/Output_Compare_Mode/ - output comparison mode routine
+[TIM/Output_Compare_Mode/](TIM/Output_Compare_Mode/) - output comparison mode routine
 
-TIM/PWM_Output/ - PWM output routine
+[TIM/PWM_Output/](TIM/PWM_Output/) - PWM output routine
 
-TIM/Synchro_ExtTrigger/ - slave mode routine, including reset mode, gating mode and trigger mode
+[TIM/Synchro_ExtTrigger/](TIM/Synchro_ExtTrigger/) - slave mode routine, including reset mode, gating mode and trigger mode
 
-TIM/Synchro_Timer/ - timer synchronization mode
+[TIM/Synchro_Timer/](TIM/Synchro_Timer/) - timer synchronization mode
 
-TIM/TIM_DMA/ - timer DMA routines
+[TIM/TIM_DMA/](TIM/TIM_DMA/) - timer DMA routines
 
-TIM/Encode/ - Timer encoder mode routines
+[TIM/Encode/](TIM/Encode/) - Timer encoder mode routines
 
-TIM/TIM_INT/ - Timer interput routines
+[TIM/TIM_INT/](TIM/TIM_INT/) - Timer interput routines
 
-TIM/TIM_Continuous/ - Timer Continuous mode routines
+[TIM/TIM_Continuous/](TIM/TIM_Continuous/) - Timer Continuous mode routines
 
-TIM/PWM_Phase-shifted/ - Timer PWM Phase shifted routines
+[TIM/PWM_Phase-shifted/](TIM/PWM_Phase-shifted/) - Timer PWM Phase shifted routines
 
-TIM/PWM_6_Step/ - Timer 6_Step PWM routines
+[TIM/PWM_6_Step/](TIM/PWM_6_Step/) - Timer 6_Step PWM routines
 
 ## USART
 
-USART/USART_DMA/ - USART DMA, master/slave mode transceiver routine
+[USART/USART_DMA/](USART/USART_DMA/) - USART DMA, master/slave mode transceiver routine
 
-USART/USART_HalfDuplex/ - single wire half duplex mode, master/slave mode transceiver routine
+[USART/USART_HalfDuplex/](USART/USART_HalfDuplex/) - single wire half duplex mode, master/slave mode transceiver routine
 
-USART/USART_HardwareFlowControl/ - hardware flow control mode, master/slave mode, transceiver routine
+[USART/USART_HardwareFlowControl/](USART/USART_HardwareFlowControl/) - hardware flow control mode, master/slave mode, transceiver routine
 
-USART/USART_Interrupt/ - USART interrupt routine, master/slave mode transceiver routine
+[USART/USART_Interrupt/](USART/USART_Interrupt/) - USART interrupt routine, master/slave mode transceiver routine
 
-USART/USART_MultiProcessorCommunication/ - multiprocessor communication mode routine
+[USART/USART_MultiProcessorCommunication/](USART/USART_MultiProcessorCommunication/) - multiprocessor communication mode routine
 
-USART/USART_Polling/ - polling transceiver mode, master/slave transceiver routine
+[USART/USART_Polling/](USART/USART_Polling/) - polling transceiver mode, master/slave transceiver routine
 
-USART/USART_Printf/ - USART Print debugging routine
+[USART/USART_Printf/](USART/USART_Printf/) - USART Print debugging routine
 
-USART/USART_SynchronousMode/ - synchronous mode, master/slave mode, transceiver routine
+[USART/USART_SynchronousMode/](USART/USART_SynchronousMode/) - synchronous mode, master/slave mode, transceiver routine
 
 ## USART-IAP 
 
-USART-IAP/ - IAP Upgrade Routine - Built-in Hex to Bin Tool and IAP Upgrade Tool
+[USART-IAP/](USART-IAP/) - IAP Upgrade Routine - Built-in Hex to Bin Tool and IAP Upgrade Tool
 
-## WWDG/
+## WWDG - Window Watchdog Timer
 
 [WWDG/WWDG/](WWDG/WWDG/) - window watchdog routine
 
