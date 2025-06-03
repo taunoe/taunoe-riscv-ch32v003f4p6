@@ -2,26 +2,26 @@
  * File Name          : main.c
  * Author             : WCH
  * Version            : V1.0.0
- * Date               : 2025/01/08
+ * Date               : 2024/01/01
  * Description        : Main program body.
  *********************************************************************************
  * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
  * Attention: This software (modified or not) and binary are used for 
  * microcontroller manufactured by Nanjing Qinheng Microelectronics.
  *******************************************************************************/
-
 /*
  *@Note
- *VTF IRQ interrupt routine:
- *This example is used to demonstrate VTF IRQ
- */
+ *GPIO routine:
+ *PD0 push-pull output.
+ *
+*/
 
 #include "debug.h"
 
 /* Global define */
 
 /* Global Variable */
-volatile uint32_t time = 0;
+volatile uint32_t time=0;
 
 void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 
@@ -34,7 +34,6 @@ void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
  */
 void Interrupt_VTF_Init(void)
 {
-    NVIC_SetPriority(SysTick_IRQn, 0x80);
     SetVTFIRQ((u32)SysTick_Handler,SysTick_IRQn,0,ENABLE);
     NVIC_EnableIRQ(SysTick_IRQn);
 }
@@ -63,6 +62,7 @@ void Systick_Init(void)
  */
 int main(void)
 {
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
     SystemCoreClockUpdate();
     Delay_Init();
 #if (SDI_PRINT == SDI_PR_OPEN)
@@ -72,13 +72,14 @@ int main(void)
 #endif
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
-    printf("Interrupt VTF Test\r\n");
-
+    printf("GPIO Toggle TEST\r\n");
+    
     Interrupt_VTF_Init();
-    Systick_Init();
+	Systick_Init();
 
     while(1)
     {
+
     }
 }
 

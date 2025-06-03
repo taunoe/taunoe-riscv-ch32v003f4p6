@@ -2,7 +2,7 @@
  * File Name          : main.c
  * Author             : WCH
  * Version            : V1.0.0
- * Date               : 2025/01/22
+ * Date               : 2024/01/01
  * Description        : Main program body.
  *********************************************************************************
  * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -13,7 +13,7 @@
 /*
  *@Note
  *Vector in RAM routine:
- *This example is used to demonstrate IRQ whose vector is in RAM
+ *This example is used to demonstrate IRQ whose vector is in RAM 
  */
 #include "debug.h"
 
@@ -31,6 +31,7 @@
  */
 int main(void)
 {
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
     SystemCoreClockUpdate();
     Delay_Init();
 #if (SDI_PRINT == SDI_PR_OPEN)
@@ -40,8 +41,8 @@ int main(void)
 #endif
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
-    printf("Vector in RAM Test\r\n");
-
+    printf("GPIO Toggle TEST\r\n");
+    
     NVIC_EnableIRQ(Software_IRQn);
 
     while(1)
